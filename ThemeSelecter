@@ -1,0 +1,93 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Kavo-Lib/main/gayv2"))()
+    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
+    local Window = Library.CreateLib("Theme Selecter", "Midnight")
+    local Players = game.Players.LocalPlayer
+
+    Notification.new("info", Players.name, "welcome to Theme Selecter")
+    -- Destroy after Select theme
+function Destroy()
+    game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
+end
+
+-- Theme tab
+    local Theme = Window:NewTab("Themes")
+    local MainTheme = Theme:NewSection("Synapse Theme")
+    -- Synapse Theme
+        MainTheme:NewButton("Synapse GigaHub", "Synapse Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://pastebin.com/raw/zzbg4cXj"))()
+        Notification.new("info", "Synapse theme", "loading  Synapse GigaHub!")
+        end)
+
+    -- Serpent Theme
+        MainTheme:NewLabel("Serpent Theme")
+        MainTheme:NewButton("Serpent GigaHub", "Serpent Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Serpent-Theme/main/Theme"))()
+        Notification.new("info", "Serpent theme", "loading Serpent GigaHub!")
+        end)
+
+    -- Light Theme
+        MainTheme:NewLabel("Light Theme")
+        MainTheme:NewButton("Light GigaHub", "Light Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Light/main/LightTheme"))()
+        Notification.new("info", "Light theme", "loading Light GigaHub!")
+        end)
+
+    -- Dark Theme
+        MainTheme:NewLabel("Dark Theme")
+        MainTheme:NewButton("Dark GigaHub", "Dark Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Dark/main/Darktheme"))()
+        Notification.new("info", "Dark theme", "loading Dark GigaHub!")
+        end)
+
+    -- Grape Theme
+        MainTheme:NewLabel("Grape Theme")
+        MainTheme:NewButton("Grape GigaHub", "Grape Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Grape/main/GrapeTheme"))()
+        Notification.new("info", "Grape theme", "loading Grape GigaHub!")
+        end)
+
+    -- Blood Theme
+        MainTheme:NewLabel("Blood Theme")
+        MainTheme:NewButton("Blood GigaHub", "Blood Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Red-Bloodtheme/main/Bloodtheme2"))()
+        Notification.new("info", "Blood theme", "loading Blood GigaHub!")
+        end)
+
+    -- Ocean Theme
+        MainTheme:NewLabel("Ocean Theme")
+        MainTheme:NewButton("Ocean GigaHub", "Ocean Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/OceanTheme/main/Ocean"))()
+        Notification.new("info", "Ocean theme", "loading Ocean GigaHub!")
+        end)
+
+    -- Midnight Theme
+        MainTheme:NewLabel("Midnight Theme")
+        MainTheme:NewButton("Midnight GigaHub", "Midnight Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/MidnightTheme/main/MidNight"))()
+        Notification.new("info", "Midnight theme", "loading Midnight GigaHub!")
+        end)
+
+    -- Sentinel Theme
+        MainTheme:NewLabel("Sentinel Theme")
+        MainTheme:NewButton("Sentinel GigaHub", "Sentinel Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/SentinelTheme/main/Sentinel2"))()
+        Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub!")
+        end)
