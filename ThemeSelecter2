@@ -91,3 +91,21 @@ end
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/SentinelTheme/main/Sentinel2"))()
         Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub!")
         end)
+        
+    -- Orange Theme
+        MainTheme:NewLabel("Orange Theme")
+        MainTheme:NewButton("Orange GigaHub", "Sentinel Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/OrangeTheme/main/OrangeTheme"))()
+        Notification.new("info", "Orange theme", "loading Orange GigaHub!")
+        end)
+        
+        -- Premium Theme
+        MainTheme:NewLabel("Premium Theme 'needs key'")
+        MainTheme:NewButton("Orange GigaHub", "Sentinel Theme", function()
+        wait(0.25)
+        Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Second-script/main/Premhub"))()
+        Notification.new("info", "Orange theme", "loading Orange GigaHub!")
+        end)
