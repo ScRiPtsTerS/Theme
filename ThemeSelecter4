@@ -94,7 +94,7 @@ end
         
     -- Orange Theme
         MainTheme:NewLabel("Orange Theme")
-        MainTheme:NewButton("Orange GigaHub", "Sentinel Theme", function()
+        MainTheme:NewButton("Orange GigaHub", "Orange Theme", function()
         wait(0.25)
         Destroy()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/OrangeTheme/main/OrangeTheme"))()
@@ -102,10 +102,10 @@ end
         end)
         
         -- Premium Theme
-        MainTheme:NewLabel("Premium Theme 'needs key'")
-        MainTheme:NewButton("Orange GigaHub", "Sentinel Theme", function()
+        MainTheme:NewLabel("Premium Theme'needs key'")
+        MainTheme:NewButton("Premium GigaHub", "Premium Theme", function()
         wait(0.25)
         Destroy()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Second-script/main/Premhub"))()
-        Notification.new("info", "Orange theme", "loading Orange GigaHub!")
+        Notification.new("info", "Premium theme", "loading Premium GigaHub!")
         end)
