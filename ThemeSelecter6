@@ -18,6 +18,10 @@ function ThemeLoad()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing5"))()
 end
 
+function PremThemeLoad()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub5"))()
+end
+
 -- Toggle Gui
 function ToggleGui()
     -- Toggle Gui Window
@@ -136,6 +140,6 @@ end
         MainTheme:NewButton("Premium GigaHub", "Premium Theme", function()
         wait(0.25)
         Destroy()
-        ThemeLoad()
+        PremThemeLoad()
         Notification.new("info", "Premium theme", "loading Premium GigaHub!")
         end)
