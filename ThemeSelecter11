@@ -196,5 +196,5 @@ if getgenv().ThemeSelect == true then
         end
     else
         Destroy()
-        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true of false, if false then add getgenv().Theme = "Name" ")
+        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true of false")
     end
