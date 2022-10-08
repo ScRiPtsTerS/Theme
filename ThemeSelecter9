@@ -187,7 +187,6 @@ if _G.ThemeSelect == true then
         PrintTheme()
     elseif _G.ThemeSelect == false then
         Destroy()
-        Destroy()
         _G.THEMES = _G.Theme
         Notification.new("info", _G.THEMES.." theme", "loading ".._G.THEMES.." GigaHub!", true, 3)
         if _G.THEMES == "Premhub" then
@@ -196,7 +195,6 @@ if _G.ThemeSelect == true then
             ThemeLoad()
         end
     else
-        Destroy()
         Destroy()
         Kick("Setting is not available for GigaHub. Try _G.ThemeSelect =  <- true of false")
     end
