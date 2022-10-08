@@ -13,12 +13,12 @@ end
 
 -- ThemeLoad
 function ThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
 end
 
 -- Premium Theme Load
 function PremThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub6"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub7"))()
 end
 
 -- Toggle Gui
@@ -68,7 +68,7 @@ function Kick(reason)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-if _G.ThemeSelect == true then
+if getgenv().ThemeSelect == true then
     Notification.new("info", Players, "welcome to Theme Selecter", true, 3)
 -- Theme tab
     local Theme = Window:NewTab("Themes")
@@ -78,7 +78,7 @@ if _G.ThemeSelect == true then
         wait(0.25)
         Destroy()
         Notification.new("info", "Synapse theme", "loading  Synapse GigaHub!", true, 3)
-        _G.THEMES = "Synapse"
+        getgenv().THEMES = "Synapse"
         ThemeLoad()
         end)
 
@@ -88,7 +88,7 @@ if _G.ThemeSelect == true then
         wait(0.25)
         Destroy()
         Notification.new("info", "Serpent theme", "loading Serpent GigaHub!", true, 3)
-        _G.THEMES = "Serpent"
+        getgenv().THEMES = "Serpent"
         ThemeLoad()
         end)
 
@@ -98,7 +98,7 @@ if _G.ThemeSelect == true then
         wait(0.25)
         Destroy()
         Notification.new("info", "Light theme", "loading Light GigaHub!", true, 3)
-        _G.THEMES = "LightTheme"
+        getgenv().THEMES = "LightTheme"
         ThemeLoad()
         end)
 
@@ -108,7 +108,7 @@ if _G.ThemeSelect == true then
         wait(0.25)
         Destroy()
         Notification.new("info", "Dark theme", "loading Dark GigaHub!", true, 3)
-        _G.THEMES = "DarkTheme"
+        getgenv().THEMES = "DarkTheme"
         ThemeLoad()
         end)
 
@@ -118,7 +118,7 @@ if _G.ThemeSelect == true then
         wait(0.25)
         Destroy()
         Notification.new("info", "Grape theme", "loading Grape GigaHub!", true, 3)
-        _G.THEMES = "GrapeTheme"
+        getgenv().THEMES = "GrapeTheme"
         ThemeLoad()
         end)
 
@@ -127,9 +127,9 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Blood GigaHub", "Blood Theme", function()
         wait(0.25)
         Destroy()
-        _G.THEMES = "BloodTheme"
-        ThemeLoad()
         Notification.new("info", "Blood theme", "loading Blood GigaHub!", true, 3)
+        getgenv().THEMES = "BloodTheme"
+        ThemeLoad()
         end)
 
     -- Ocean Theme
@@ -137,9 +137,9 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Ocean GigaHub", "Ocean Theme", function()
         wait(0.25)
         Destroy()
-        _G.THEMES = "Ocean"
-        ThemeLoad()
         Notification.new("info", "Ocean theme", "loading Ocean GigaHub!", true, 3)
+        getgenv().THEMES = "Ocean"
+        ThemeLoad()
         end)
 
     -- Midnight Theme
@@ -147,9 +147,9 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Midnight GigaHub", "Midnight Theme", function()
         wait(0.25)
         Destroy()
-        _G.THEMES = "Midnight"
-        ThemeLoad()
         Notification.new("info", "Midnight theme", "loading Midnight GigaHub!", true, 3)
+        getgenv().THEMES = "Midnight"
+        ThemeLoad()
         end)
 
     -- Sentinel Theme
@@ -157,9 +157,9 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Sentinel GigaHub", "Sentinel Theme", function()
         wait(0.25)
         Destroy()
-        _G.THEMES = "Sentinel"
-        ThemeLoad()
         Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub!", true, 3)
+        getgenv().THEMES = "Sentinel"
+        ThemeLoad()
         end)
         
     -- Orange Theme
@@ -167,9 +167,9 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Orange GigaHub", "Orange Theme", function()
         wait(0.25)
         Destroy()
-        _G.THEMES = "Orange"
-        ThemeLoad()
         Notification.new("info", "Orange theme", "loading Orange GigaHub!", true, 3)
+        getgenv().THEMES = "Orange"
+        ThemeLoad()
         end)
         
         -- Premium Theme
@@ -177,24 +177,24 @@ if _G.ThemeSelect == true then
         MainTheme:NewButton("Premium GigaHub", "Premium Theme", function()
         wait(0.25)
         Destroy()
-        PremThemeLoad()
         Notification.new("info", "Premium theme", "loading Premium GigaHub!", true, 3)
+        PremThemeLoad()
         end)
         --ToggleGui
         ToggleGui()
 
         --Theme Print
         PrintTheme()
-    elseif _G.ThemeSelect == false then
+    elseif getgenv().ThemeSelect == false then
         Destroy()
-        _G.THEMES = _G.Theme
-        Notification.new("info", _G.THEMES.." theme", "loading ".._G.THEMES.." GigaHub!", true, 3)
-        if _G.THEMES == "Premhub" then
+        getgenv().THEMES = getgenv().Theme
+        Notification.new("info", getgenv().THEMES.." theme", "loading "..getgenv().THEMES.." GigaHub!", true, 3)
+        if getgenv().THEMES == "Premhub" then
             PremThemeLoad()
         else
             ThemeLoad()
         end
     else
         Destroy()
-        Kick("Setting is not available for GigaHub. Try _G.ThemeSelect =  <- true of false")
+        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true of false, if false then add getgenv().Theme = "Name" ")
     end
