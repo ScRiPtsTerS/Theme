@@ -13,12 +13,12 @@ end
 
 -- ThemeLoad
 function ThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing5"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing6"))()
 end
 
 -- Premium Theme Load
 function PremThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub5"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub6"))()
 end
 
 -- Toggle Gui
@@ -190,7 +190,11 @@ if _G.ThemeSelect == true then
         Destroy()
         _G.THEMES = _G.Theme
         Notification.new("info", _G.THEMES.." theme", "loading ".._G.THEMES.." GigaHub!", true, 3)
-        ThemeLoad()
+        if _G.THEMES == "Premhub" then
+            PremThemeLoad()
+        else
+            ThemeLoad()
+        end
     else
         Destroy()
         Destroy()
