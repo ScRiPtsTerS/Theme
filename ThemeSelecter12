@@ -13,12 +13,12 @@ end
 
 -- ThemeLoad
 function ThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing7"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing8"))()
 end
 
 -- Premium Theme Load
 function PremThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub7"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub8"))()
 end
 
 -- Toggle Gui
@@ -57,14 +57,17 @@ function PrintTheme()
     print("Loaded Orange Theme")
     wait(0.1)
     print("Loaded PremiumHub Theme")
-    wait(0.5)
     wait(1)
     print("100%")
-    print("ThemeSelecter has loaded")
+    print("ThemeSelecter has loaded ✅")
 end
 
 function Kick(reason)
     game.Players.LocalPlayer:Kick(reason)
+end
+
+function ThemeNotifi()
+    Notification.new("info", getgenv().THEMES.." theme", "loading "..getgenv().THEMES.." GigaHub! "..getgenv().Emoji, true, 3)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -77,7 +80,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Synapse GigaHub", "Synapse Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Synapse theme", "loading  Synapse GigaHub!", true, 3)
+        Notification.new("info", "Synapse theme", "loading  Synapse GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Synapse"
         ThemeLoad()
         end)
@@ -87,7 +90,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Serpent GigaHub", "Serpent Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Serpent theme", "loading Serpent GigaHub!", true, 3)
+        Notification.new("info", "Serpent theme", "loading Serpent GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Serpent"
         ThemeLoad()
         end)
@@ -97,7 +100,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Light GigaHub", "Light Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Light theme", "loading Light GigaHub!", true, 3)
+        Notification.new("info", "Light theme", "loading Light GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "LightTheme"
         ThemeLoad()
         end)
@@ -107,7 +110,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Dark GigaHub", "Dark Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Dark theme", "loading Dark GigaHub!", true, 3)
+        Notification.new("info", "Dark theme", "loading Dark GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "DarkTheme"
         ThemeLoad()
         end)
@@ -117,7 +120,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Grape GigaHub", "Grape Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Grape theme", "loading Grape GigaHub!", true, 3)
+        Notification.new("info", "Grape theme", "loading Grape GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "GrapeTheme"
         ThemeLoad()
         end)
@@ -127,7 +130,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Blood GigaHub", "Blood Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Blood theme", "loading Blood GigaHub!", true, 3)
+        Notification.new("info", "Blood theme", "loading Blood GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "BloodTheme"
         ThemeLoad()
         end)
@@ -137,7 +140,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Ocean GigaHub", "Ocean Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Ocean theme", "loading Ocean GigaHub!", true, 3)
+        Notification.new("info", "Ocean theme", "loading Ocean GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Ocean"
         ThemeLoad()
         end)
@@ -147,7 +150,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Midnight GigaHub", "Midnight Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Midnight theme", "loading Midnight GigaHub!", true, 3)
+        Notification.new("info", "Midnight theme", "loading Midnight GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Midnight"
         ThemeLoad()
         end)
@@ -157,7 +160,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Sentinel GigaHub", "Sentinel Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub!", true, 3)
+        Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Sentinel"
         ThemeLoad()
         end)
@@ -167,7 +170,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Orange GigaHub", "Orange Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Orange theme", "loading Orange GigaHub!", true, 3)
+        Notification.new("info", "Orange theme", "loading Orange GigaHub! "..getgenv().Emoji, true, 3)
         getgenv().THEMES = "Orange"
         ThemeLoad()
         end)
@@ -177,7 +180,7 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Premium GigaHub", "Premium Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Premium theme", "loading Premium GigaHub!", true, 3)
+        Notification.new("info", "Premium theme", "loading Premium GigaHub! "..getgenv().Emoji, true, 3)
         PremThemeLoad()
         end)
         --ToggleGui
@@ -188,7 +191,7 @@ if getgenv().ThemeSelect == true then
     elseif getgenv().ThemeSelect == false then
         Destroy()
         getgenv().THEMES = getgenv().Theme
-        Notification.new("info", getgenv().THEMES.." theme", "loading "..getgenv().THEMES.." GigaHub!", true, 3)
+        ThemeNotifi()
         if getgenv().THEMES == "Premhub" then
             PremThemeLoad()
         else
@@ -196,5 +199,5 @@ if getgenv().ThemeSelect == true then
         end
     else
         Destroy()
-        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true of false")
+        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true or false")
     end
