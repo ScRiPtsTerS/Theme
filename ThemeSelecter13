@@ -1,6 +1,29 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+-- Customize Features
+
+-- Hub Emoji
+Emoji = getgenv().Hub_Emoji
+-- if they don't put any thing for Hub Emoji
+if getgenv().Hub_Emoji == nil then
+    Emoji = "🔥"
+end
+
+-- Notification Emoji
+getgenv().Emoji = getgenv().Notifi_Emoji
+-- If they don't put any thing for Notification Emoji
+if getgenv().Notifi_Emoji == nil then
+    getgenv().Emoji = "✅"
+end
+
+-- If they don't put anything for ThemeSelect
+if getgenv().ThemeSelect == nil then
+    getgenv().ThemeSelect = true
+end
+---------------------------------------------------------------------------------------------------------------------------------------
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/KavoTest/main/kavotest8"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
-local Window = Library.CreateLib("Theme Selecter", "Midnight")
+local Window = Library.CreateLib("Theme Selecter "..Emoji, "Midnight")
 local Players = game.Players.LocalPlayer.Name
 
 ---------------------------------------------------------------------------------------------------------------------------------------  
@@ -13,12 +36,14 @@ end
 
 -- ThemeLoad
 function ThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing8"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing9"))()
+    getgenv().ThemeSelect = nil
 end
 
 -- Premium Theme Load
 function PremThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub8"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub9"))()
+    getgenv().ThemeSelect = nil
 end
 
 -- Toggle Gui
@@ -29,6 +54,7 @@ function ToggleGui()
     -- Toggle Gui Button
     MainTheme:NewKeybind("Toggle UI", "Self Explains", Enum.KeyCode.K, function()
         Library:ToggleUI()
+        Notification.new("info", "Toggled Gui", "You Just Toggled the Gui "..getgenv().Emoji, true, 3)
     end)
 end
 
@@ -59,7 +85,7 @@ function PrintTheme()
     print("Loaded PremiumHub Theme")
     wait(1)
     print("100%")
-    print("ThemeSelecter has loaded ✅")
+    print("ThemeSelecter has loaded "..getgenv().Emoji)
 end
 
 function Kick(reason)
@@ -72,7 +98,7 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 if getgenv().ThemeSelect == true then
-    Notification.new("info", Players, "welcome to Theme Selecter", true, 3)
+    Notification.new("info", Players, "welcome to Theme Selecter "..getgenv().Emoji, true, 3)
 -- Theme tab
     local Theme = Window:NewTab("Themes")
     local MainTheme = Theme:NewSection("Synapse Theme")
