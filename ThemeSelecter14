@@ -1,23 +1,23 @@
+repeat task.wait() until game:IsLoaded() == true
 ---------------------------------------------------------------------------------------------------------------------------------------
 -- Customize Features
-
--- Hub Emoji
-Emoji = getgenv().Hub_Emoji
--- if they don't put any thing for Hub Emoji
-if getgenv().Hub_Emoji == nil then
+local Emoji = getgenv().Hub_Emoji -- Hub Emoji
+if getgenv().Hub_Emoji == nil then -- if they don't put any thing for Hub Emoji
     Emoji = "🔥"
 end
-
--- Notification Emoji
-getgenv().Emoji = getgenv().Notifi_Emoji
--- If they don't put any thing for Notification Emoji
-if getgenv().Notifi_Emoji == nil then
-    getgenv().Emoji = "✅"
+local notifiEmoji = getgenv().Notifi_Emoji -- Notification Emoji
+if getgenv().Notifi_Emoji == nil then -- If they don't put any thing for Notification Emoji
+    notifiEmoji = "✅"
 end
-
--- If they don't put anything for ThemeSelect
-if getgenv().ThemeSelect == nil then
-    getgenv().ThemeSelect = true
+if getgenv().ThemeSelect ~= true then -- If they don't put anything for ThemeSelect
+if getgenv().ThemeSelect ~= false then
+getgenv().ThemeSelect = true
+end    
+end
+if getgenv().THEMES == nil then -- if they don't put anything for THEMES
+if getgenv().ThemeSelect == false then
+    getgenv().THEMES = "Synapse"
+end    
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -28,33 +28,25 @@ local Players = game.Players.LocalPlayer.Name
 
 ---------------------------------------------------------------------------------------------------------------------------------------  
 -- Functions
-
--- Destroy after Select theme
-function Destroy()
+function Destroy() -- Destroy after Select theme
     game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
 end
-
--- ThemeLoad
-function ThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing9"))()
+function ThemeLoad() -- ThemeLoad
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing10"))()
     getgenv().ThemeSelect = nil
 end
-
--- Premium Theme Load
-function PremThemeLoad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub9"))()
+function PremThemeLoad() -- Premium Theme Load
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub10"))()
     getgenv().ThemeSelect = nil
 end
-
--- Toggle Gui
-function ToggleGui()
+function ToggleGui() -- Toggle Gui
     -- Toggle Gui Window
     local Theme = Window:NewTab("Toggle UI")
     local MainTheme = Theme:NewSection("You can change settings")
     -- Toggle Gui Button
     MainTheme:NewKeybind("Toggle UI", "Self Explains", Enum.KeyCode.K, function()
         Library:ToggleUI()
-        Notification.new("info", "Toggled Gui", "You Just Toggled the Gui "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Toggled Gui", "You Just Toggled the Gui "..notifiEmoji, true, 3)
     end)
 end
 
@@ -84,21 +76,18 @@ function PrintTheme()
     wait(0.1)
     print("Loaded PremiumHub Theme")
     wait(1)
-    print("100%")
-    print("ThemeSelecter has loaded "..getgenv().Emoji)
+    print("ThemeSelecter has loaded "..notifiEmoji)
 end
-
-function Kick(reason)
+function Kick(reason) -- kick player
     game.Players.LocalPlayer:Kick(reason)
 end
-
-function ThemeNotifi()
-    Notification.new("info", getgenv().THEMES.." theme", "loading "..getgenv().THEMES.." GigaHub! "..getgenv().Emoji, true, 3)
+function ThemeNotifi() -- welcome notif
+    Notification.new("info", getgenv().THEMES.." theme", "loading "..getgenv().THEMES.." GigaHub! "..notifiEmoji, true, 3)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 if getgenv().ThemeSelect == true then
-    Notification.new("info", Players, "welcome to Theme Selecter "..getgenv().Emoji, true, 3)
+    Notification.new("info", Players, "welcome to Theme Selecter "..notifiEmoji, true, 3)
 -- Theme tab
     local Theme = Window:NewTab("Themes")
     local MainTheme = Theme:NewSection("Synapse Theme")
@@ -106,112 +95,101 @@ if getgenv().ThemeSelect == true then
         MainTheme:NewButton("Synapse GigaHub", "Synapse Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Synapse theme", "loading  Synapse GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Synapse theme", "loading  Synapse GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Synapse"
         ThemeLoad()
         end)
-
     -- Serpent Theme
         MainTheme:NewLabel("Serpent Theme")
         MainTheme:NewButton("Serpent GigaHub", "Serpent Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Serpent theme", "loading Serpent GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Serpent theme", "loading Serpent GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Serpent"
         ThemeLoad()
         end)
-
     -- Light Theme
         MainTheme:NewLabel("Light Theme")
         MainTheme:NewButton("Light GigaHub", "Light Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Light theme", "loading Light GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Light theme", "loading Light GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "LightTheme"
         ThemeLoad()
         end)
-
     -- Dark Theme
         MainTheme:NewLabel("Dark Theme")
         MainTheme:NewButton("Dark GigaHub", "Dark Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Dark theme", "loading Dark GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Dark theme", "loading Dark GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "DarkTheme"
         ThemeLoad()
         end)
-
     -- Grape Theme
         MainTheme:NewLabel("Grape Theme")
         MainTheme:NewButton("Grape GigaHub", "Grape Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Grape theme", "loading Grape GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Grape theme", "loading Grape GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "GrapeTheme"
         ThemeLoad()
         end)
-
     -- Blood Theme
         MainTheme:NewLabel("Blood Theme")
         MainTheme:NewButton("Blood GigaHub", "Blood Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Blood theme", "loading Blood GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Blood theme", "loading Blood GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "BloodTheme"
         ThemeLoad()
         end)
-
     -- Ocean Theme
         MainTheme:NewLabel("Ocean Theme")
         MainTheme:NewButton("Ocean GigaHub", "Ocean Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Ocean theme", "loading Ocean GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Ocean theme", "loading Ocean GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Ocean"
         ThemeLoad()
         end)
-
     -- Midnight Theme
         MainTheme:NewLabel("Midnight Theme")
         MainTheme:NewButton("Midnight GigaHub", "Midnight Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Midnight theme", "loading Midnight GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Midnight theme", "loading Midnight GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Midnight"
         ThemeLoad()
         end)
-
     -- Sentinel Theme
         MainTheme:NewLabel("Sentinel Theme")
         MainTheme:NewButton("Sentinel GigaHub", "Sentinel Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Sentinel theme", "loading Sentinel GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Sentinel"
         ThemeLoad()
         end)
-        
     -- Orange Theme
         MainTheme:NewLabel("Orange Theme")
         MainTheme:NewButton("Orange GigaHub", "Orange Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Orange theme", "loading Orange GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Orange theme", "loading Orange GigaHub! "..notifiEmoji, true, 3)
         getgenv().THEMES = "Orange"
         ThemeLoad()
         end)
-        
         -- Premium Theme
-        MainTheme:NewLabel("Premium Theme 'needs key'")
+        MainTheme:NewLabel("Premium Theme 'need to own it'")
         MainTheme:NewButton("Premium GigaHub", "Premium Theme", function()
         wait(0.25)
         Destroy()
-        Notification.new("info", "Premium theme", "loading Premium GigaHub! "..getgenv().Emoji, true, 3)
+        Notification.new("info", "Premium theme", "loading Premium GigaHub! "..notifiEmoji, true, 3)
         PremThemeLoad()
         end)
         --ToggleGui
         ToggleGui()
-
         --Theme Print
         PrintTheme()
     elseif getgenv().ThemeSelect == false then
@@ -225,5 +203,5 @@ if getgenv().ThemeSelect == true then
         end
     else
         Destroy()
-        Kick("Setting is not available for GigaHub. Try getgenv().ThemeSelect =  <- true or false")
+        Kick("Setting is not available for GigaHub")
     end
