@@ -32,11 +32,11 @@ function Destroy() -- Destroy after Select theme
     game:GetService("CoreGui").infinfinf:Destroy() -- infinfinf = name of gui
 end
 function ThemeLoad() -- ThemeLoad
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing10"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/Test/main/Testing11"))()
     getgenv().ThemeSelect = nil
 end
 function PremThemeLoad() -- Premium Theme Load
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub10"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScRiPtsTerS/script/main/Premhub11"))()
     getgenv().ThemeSelect = nil
 end
 function ToggleGui() -- Toggle Gui
